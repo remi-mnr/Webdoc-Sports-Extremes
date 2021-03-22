@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta id="viewport" name="viewport" content ="width=device-width" />
+	<meta charset="utf-8">
+	<title>Erreur 404</title>
+
+	<!-- Styles perso -->
+	<link rel="stylesheet" href="../static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/fonts.css">
+
+	<!-- les CSS d'animation -->
+	<link rel="stylesheet" href="../static/css/animate.css">
+	<link rel="stylesheet" href="../static/css/animsition.min.css">
+
+	<!-- Importation de la librairie jQuery et du script d'animation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../static/js/animsition.min.js"></script>		
+
+</head>
+<body>
+
+		<!-- Dans cette div les éléments de la transition -->
+		<div class="animsition page-404" style="background-color: #fff">
+			<!-- HOME -->
+			<a href="../index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+				<img src="../static/img/home.png" class="home_button">
+			</a>
+
+			<div class="logo-404">
+				<img src="../static/img/logo_tmp_inv.png">
+			</div>
+
+			<div class="erreur-container">
+				<div class="img-404">
+					<img src="../static/img/404.png">
+				</div>
+				<p>Il semblerait que la page que vous cherchez n'existe pas ou plus</p>
+				<p>Si ce problème persiste, contacter l'équipe de développeur</p>
+
+				<div class="link-margin">
+					<a href="mailto:thomaslamothe@free.fr">Contacter l'équipe</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- animate.js -->
+		<script>
+			$(function(){	
+
+				// $('#hitbox1').mouseover(function(){
+				// 	$('#title').css('visibility','visibile');
+				// 	animate('#title', 'flipInX');
+				// 	return false;
+				// })
+
+				// $('#hitbox1').mouseout(function(){
+				// 	setTimeout(function(){
+				// 		animate('#title', 'flipOutX');
+				// 		setTimeout(function(){
+				// 			$('#title').css('visibility','hidden');
+				// 		}, 490);
+				// 	},100);
+				// 	return false;
+				// });
+
+				$('#1').on("mouseenter",function(){
+					$('#dsv').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#dsv').removeClass('animated '+'bounce');
+				});
+
+				$('#2').on("mouseenter",function(){
+					$('#mnr').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#mnr').removeClass('animated '+'bounce');
+				});
+
+				$('#3').on("mouseenter",function(){
+					$('#lmt').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#lmt').removeClass('animated '+'bounce');
+				});
+
+				$('#4').on("mouseenter",function(){
+					$('#cnj').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#cnj').removeClass('animated '+'bounce');
+				});
+
+
+
+			// animate
+			// function animate(element, animation) {
+			// 	$(element).addClass('animated '+animation);
+			// 	var wait = setTimeout(function(){
+			// 		$(element).removeClass('animated '+animation);
+			// 	}, 490);
+			// }
+			
+			});
+		</script>
+
+		<!-- Animsition -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".animsition").animsition({
+
+					// CHANGER L'ANIMATION D'ENTREE //
+					inClass: 'zoom-in-lg',
+					//
+
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+    				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    				loading: true,
+    				loadingParentElement: 'body', //animsition wrapper element
+    				loadingClass: 'animsition-loading',
+    				loadingInner: '', // e.g '<img src="loading.svg" />'
+    				timeout: false,
+    				timeoutCountdown: 5000,
+    				onLoadEvent: true,
+    				browser: [ 'animation-duration', '-webkit-animation-duration'],
+    				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    				overlay : false,
+    				overlayClass : 'animsition-overlay-slide',
+    				overlayParentElement : 'body',
+    				transition: function(url){ window.location.href = url; }
+    			});
+			});
+			$('.animsition-link').click(function(){
+				sound.fade(0.5, 0, 400);
+			});
+		</script>
+
+		<script type="text/javascript" src="../static/js/animation-credits.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta id="viewport" name="viewport" content ="width=device-width" />
+	<title>Les coulisses des sports Extrêmes</title>
+	<link rel="icon" type="image/png" href="../static/img/doggo.png" />
+
+	<!-- Styles perso -->
+	<link rel="stylesheet" href="../static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/fonts.css">
+
+	<!-- les CSS d'animation -->
+	<link rel="stylesheet" href="../static/css/animate.css">
+	<link rel="stylesheet" href="../static/css/animsition.min.css">
+
+	<!-- Importation de la librairie jQuery et du script d'animation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../static/js/animsition.min.js"></script>	
+
+</head>
+<body>
+
+		<!-- Dans cette div les éléments de la transition -->
+		<div class="animsition page" style="background-color: #2979FF;">
+			<!-- HOME -->
+			<a href="../index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+				<img src="../static/img/home.png" class="home_button">
+			</a>
+			<!-- Le logo principal -->
+			<img src="../static/img/crew/27157640_325609971292383_101030681_n.png" class="logo credits-logo">
+
+			<!-- Lien vers les crédits -->
+			<!-- <a href="../pages/credits.html" class="crewcore">CRÉÉ ET PROPULSÉ PAR LE CREW CORE</a> -->
+			
+			
+
+			<div class="crew_container">
+
+				<div id="1" class="crew_member">
+					<div class="in_item">
+						<p class="menu_title credits-title">Valentin</p>
+						<img src="../static/img/crew/dsv.png" class="crew_face" id="dsv">
+						<div class="up-credits">
+							<p>Code : 10 %</p>
+
+							<div class="progressbar">
+								<div class="progress codeGag"></div>
+							</div>
+
+							<p>Interviews : 60 %</p>
+
+							<div class="progressbar">
+								<div class="progress interGag"></div>
+							</div>
+
+							<p>Rédaction du contenu : 30 %</p>
+
+							<div class="progressbar">
+								<div class="progress contGag"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="2" class="crew_member" style="">
+					<div class="in_item">
+						<p class="menu_title credits-title">Rémi</p>
+						<img src="../static/img/crew/remi.png" class="crew_face" id="mnr">
+						<div class="up-credits notyremz">
+							<p>Code : 70 %</p>
+
+							<div class="progressbar">
+								<div class="progress codeNoty"></div>
+							</div>
+
+							<p>Montage : 20 %</p>
+
+							<div class="progressbar">
+								<div class="progress interNoty"></div>
+							</div>
+
+							<p>Infographie, design : 10 %</p>
+
+							<div class="progressbar">
+								<div class="progress contNoty"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="3" class="crew_member" style="">
+					<div class="in_item">
+						<p class="menu_title credits-title">Thomas</p>
+						<img src="../static/img/crew/thomada.png" class="crew_face" id="lmt">
+						<div class="up-credits thomada">
+							<p>Code : 80 %</p>
+
+							<div class="progressbar">
+								<div class="progress codeAda"></div>
+							</div>
+
+							<p>Photographie : 5 %</p>
+
+							<div class="progressbar">
+								<div class="progress interAda"></div>
+							</div>
+
+							<p>Design, infographie : 15 %</p>
+
+							<div class="progressbar">
+								<div class="progress contAda"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="4" class="crew_member" style="">
+					<div class="in_item">
+						<p class="menu_title credits-title">Julien</p>
+						<img src="../static/img/crew/juljuljul.png" class="crew_face" id="cnj">
+						<div class="up-credits madimey">
+							<p>Code : 15 %</p>
+
+							<div class="progressbar">
+								<div class="progress codeDimey"></div>
+							</div>
+
+							<p>Interviews : 10 %</p>
+
+							<div class="progressbar">
+								<div class="progress interDimey"></div>
+							</div>
+
+							<p>Rédaction du contenu : 75 %</p>
+
+							<div class="progressbar">
+								<div class="progress contDimey"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="sliderwrapper">
+				<div class="sliding-background">
+				</div>
+			</div>
+
+		</div>
+
+		<!-- animate.js -->
+		<script>
+			$(function(){	
+
+				// $('#hitbox1').mouseover(function(){
+				// 	$('#title').css('visibility','visibile');
+				// 	animate('#title', 'flipInX');
+				// 	return false;
+				// })
+
+				// $('#hitbox1').mouseout(function(){
+				// 	setTimeout(function(){
+				// 		animate('#title', 'flipOutX');
+				// 		setTimeout(function(){
+				// 			$('#title').css('visibility','hidden');
+				// 		}, 490);
+				// 	},100);
+				// 	return false;
+				// });
+
+				$('#1').on("mouseenter",function(){
+					$('#dsv').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#dsv').removeClass('animated '+'bounce');
+				});
+
+				$('#2').on("mouseenter",function(){
+					$('#mnr').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#mnr').removeClass('animated '+'bounce');
+				});
+
+				$('#3').on("mouseenter",function(){
+					$('#lmt').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#lmt').removeClass('animated '+'bounce');
+				});
+
+				$('#4').on("mouseenter",function(){
+					$('#cnj').addClass('animated '+'bounce');
+				}).on("mouseleave",function(){
+					$('#cnj').removeClass('animated '+'bounce');
+				});
+
+
+
+			// animate
+			// function animate(element, animation) {
+			// 	$(element).addClass('animated '+animation);
+			// 	var wait = setTimeout(function(){
+			// 		$(element).removeClass('animated '+animation);
+			// 	}, 490);
+			// }
+			
+			});
+		</script>
+
+		<!-- Animsition -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".animsition").animsition({
+
+					// CHANGER L'ANIMATION D'ENTREE //
+					inClass: 'zoom-in-lg',
+					//
+
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+    				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    				loading: true,
+    				loadingParentElement: 'body', //animsition wrapper element
+    				loadingClass: 'animsition-loading',
+    				loadingInner: '', // e.g '<img src="loading.svg" />'
+    				timeout: false,
+    				timeoutCountdown: 5000,
+    				onLoadEvent: true,
+    				browser: [ 'animation-duration', '-webkit-animation-duration'],
+    				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    				overlay : false,
+    				overlayClass : 'animsition-overlay-slide',
+    				overlayParentElement : 'body',
+    				transition: function(url){ window.location.href = url; }
+    			});
+			});
+			$('.animsition-link').click(function(){
+				sound.fade(0.5, 0, 400);
+			});
+		</script>
+
+		<!-- Howler.js -->
+		<script src="../static/js/howler.min.js"></script>
+		<script>
+			var sound = new Howl({
+				src: ['../static/sound/all-star.ogg'],
+				autoplay: true,
+				loop: true,
+				volume: 0.2
+			});
+			sound.play();	
+
+			var selectSound = new Howl({
+			src: ['../static/sound/select.wav'],
+			autoplay: false,
+			loop: false,
+			volume: 0.08
+			});
+			
+			$('.crew_member').on("mouseenter",function(){
+					selectSound.play();
+			});		
+		</script>
+		<script type="text/javascript" src="../static/js/animation-credits.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta id="viewport" name="viewport" content ="width=device-width" />
+	<title>Les coulisses des sports Extrêmes</title>
+	<link rel="icon" type="image/png" href="../img/doggo.png" />
+
+	<!-- Styles perso -->
+	<link rel="stylesheet" href="static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="static/css/reset.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+
+	<!-- les CSS d'animation -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<link rel="stylesheet" href="static/css/animsition.min.css">
+
+	<!-- Importation de la librairie jQuery et du script d'animation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="static/js/animsition.min.js"></script>		
+
+</head>
+<body>
+		<!-- Dans cette div les éléments de la transition -->
+		<div class="animsition page" style="background-color: #2979FF;">
+			<!-- Le logo principal -->
+			<img src="static/img/logo_tmp.png" class="logo">
+
+			<!-- Lien vers les crédits -->
+			<a href="pages/sources.html" class="crewcore animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">CRÉÉ ET PROPULSÉ PAR LE CREW CORE</a>
+
+			<!-- Gestion du son -->
+			<div class="sound-set">
+				<img src="static/img/speaker.svg" class="sound">
+				<img src="static/img/speaker-off.svg" class="soundoff">
+			</div>
+
+			<div class="menu_container">
+
+				<div id="1" class="menu_item">
+					<a href="pages/lifestyle/index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+						<div class="in_item">
+							<p class="menu_title">Mode de vie</p>
+							<img src="static/img/camping.svg" class="menu_logos">
+						</div>
+					</a>
+				</div>
+
+				<div id="2" class="menu_item" style="">
+					<a href="pages/training/index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+					<div class="in_item">
+						<p class="menu_title">Entraînement</p>
+						<img src="static/img/gym.svg" class="menu_logos">
+					</div>
+					</a>
+				</div>
+
+				<div id="3" class="menu_item">
+					<a href="pages/compet/index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+					<div class="in_item">
+						<p class="menu_title">Compétition</p>
+						<img src="static/img/trophy.svg" class="menu_logos">
+					</div>
+					</a>
+				</div>
+
+				<div id="4" class="menu_item">
+					<a href="pages/financial/index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+					<div class="in_item">
+						<p class="menu_title">Budget</p>
+						<img src="static/img/money.svg" class="menu_logos">
+					</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- animate.js -->
+		<script>
+			$(function(){	
+
+				$('#hitbox1').mouseover(function(){
+					$('#title').css('visibility','visibile');
+					animate('#title', 'flipInX');
+					return false;
+				})
+
+				$('#hitbox1').mouseout(function(){
+					setTimeout(function(){
+						animate('#title', 'flipOutX');
+						setTimeout(function(){
+							$('#title').css('visibility','hidden');
+						}, 490);
+					},100);
+					return false;
+				});
+
+			//animate
+			function animate(element, animation) {
+				$(element).addClass('animated '+animation);
+				var wait = setTimeout(function(){
+					$(element).removeClass('animated '+animation);
+				}, 490);
+			}
+		});
+		</script>
+
+		<!-- Animsition -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".animsition").animsition({
+
+					// CHANGER L'ANIMATION D'ENTREE //
+					inClass: 'zoom-in-lg',
+					//
+
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+    				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    				loading: true,
+    				loadingParentElement: 'body', //animsition wrapper element
+    				loadingClass: 'animsition-loading',
+    				loadingInner: '', // e.g '<img src="loading.svg" />'
+    				timeout: false,
+    				timeoutCountdown: 5000,
+    				onLoadEvent: true,
+    				browser: [ 'animation-duration', '-webkit-animation-duration'],
+    				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    				overlay : false,
+    				overlayClass : 'animsition-overlay-slide',
+    				overlayParentElement : 'body',
+    				transition: function(url){ window.location.href = url; }
+    			});
+			});
+			$('.animsition-link').click(function(){
+				sound.fade(0.5, 0, 400);
+			});
+		</script>
+
+		<!-- Howler.js -->
+		<script src="static/js/howler.min.js"></script>
+		<script src="static/js/howler-index.js"></script>
+
+		<!-- Fichier Perso -->
+		<script type="text/javascript" src="static/js/script-index.js"></script>
+</body>
+</html>

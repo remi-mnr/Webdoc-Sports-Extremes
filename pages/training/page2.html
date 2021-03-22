@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta id="viewport" name="viewport" content ="width=device-width" />
+	<meta charset="utf-8">
+	<title>Les coulisses des sports Extrêmes</title>
+	<link rel="icon" type="image/png" href="../img/doggo.png" />
+
+	<!-- Styles perso -->
+	<link rel="stylesheet" href="../../static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
+	<link rel="stylesheet" href="../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/fonts.css">
+
+	<!-- les CSS d'animation -->
+	<link rel="stylesheet" href="../../static/css/animate.css">
+	<link rel="stylesheet" href="../../static/css/animsition.min.css">
+
+	<!-- Importation de la librairie jQuery et du script d'animation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../../static/js/animsition.min.js"></script>	
+
+	<!-- La vidéo -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/clean_modal.css">
+	<script src="../../static/js/jquery-modal-video.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Gestion du son -->
+	<div class="sound-set set-article">
+		<img src="../../static/img/speaker.svg" class="sound">
+		<img src="../../static/img/speaker-off.svg" class="soundoff soundoffcredits">
+	</div>
+
+	<!-- HOME -->
+	<a href="../../index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+		<img src="../../static/img/home.png" class="home_button">
+	</a>
+
+	<!-- ARROWS -->
+	<!-- il suffit de décommenter -->
+	<!--TOP-->
+	<a href="page3.html" class="animsition-link" data-animsition-out-class="fade-out-down-sm" data-animsition-out-duration="300">
+		<img src="../../static/img/arrow.png" class="arrow_top">
+	</a>
+	<!--DOWN-->
+	<a href="index.html" class="animsition-link" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300">
+			<img src="../../static/img/arrow.png" class="arrow_down">
+		</a>
+	<!--LEFT-->
+	<!-- <a href="#" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300">
+			<img src="../../static/img/arrow.png" class="arrow_left">
+		</a> -->
+	<!--RIGHT-->
+	<!-- <a href="#" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300">
+			<img src="../../static/img/arrow.png" class="arrow_right">
+		</a> -->
+
+		<!-- Dans cette div les éléments de la transition -->
+		<div class="animsition page" style="background-color: #2979FF;">
+
+			<img class="js-modal-btn videobutton" data-video-id="ypbDqZc-Fh8?autoplay=1&showinfo=0&rel=0" src="../../static/img/play-button2.svg" alt="">
+
+			<div class="contenu in_line">
+					<div class="in_column">
+						<p class="title_text">La préparation</p>
+						<p class="text-left">Malgré la réputation de « casse-cou » que possèdent les sportifs de l’extrême, il n’y en a pas un qui ne s’entraîne pas et ne se prépare pas avant d’exercer.</p>
+						<p class="text-left">En effet, c’est en s’entraînant durement que ces hommes et femmes arrivent à effectuer ces exploits physiques. La chute fait partie intégrante de l’apprentissage : c’est une progression, il faut commencer petit et monter en difficulté (par exemple : on fait plusieurs années de <a target="_blank" class="highlight" href="https://fr.wikipedia.org/wiki/Slackline" title="Consulter l'article wikipedia.">Slack-Line</a> avant d’envisager de monter sur une <a target="_blank" class="highlight" href="https://fr.wikipedia.org/wiki/Highline" title="Consulter l'article wikipedia.">High-line</a>).</p>
+
+						<p class="text-left">Cela reste une grande famille et l'apprentissage se fait par les plus anciens qui perpétuent la tradition et transmettent la pratique aux jeunes.</p>
+					</div>
+					<div class="img-right" data-tilt data-tilt-scale="1.05" data-tilt-perspective="1500" style="transform-style: preserve-3d;" >
+						<img class="img-right" src="../../static/img/slack_tilt_bg.png" >
+						<img class="img-right" src="../../static/img/slack_tilt_mg.png" style="transform: translateZ(35px) translateX(-50%) translateY(-50%);; position: absolute; top: 50%; left: 50%;">
+						<img class="img-right" src="../../static/img/slack_tilt_fg.png" style="transform: translateZ(50px) translateX(-50%) translateY(-50%);; position: absolute; top: 50%; left: 50%;">
+					</div>
+			</div>
+			
+
+				<!-- Dans cette div les éléments en parallax -->
+		<div class="parallax_container">
+			<div id="scene">
+				<div data-depth="0.05"><img src="../../static/img/parapente/background.png"></div>
+				<div data-depth="0.1"><img src="../../static/img/parapente/front.png"></div>
+			</div>
+		</div>
+
+					
+
+		</div>
+
+
+
+
+		<!-- animate.css -->
+		<script>
+			$(function(){	
+
+				$('#hitbox1').mouseover(function(){
+					$('#title').css('visibility','visibile');
+					animate('#title', 'flipInX');
+					return false;
+				})
+
+				$('#hitbox1').mouseout(function(){
+					setTimeout(function(){
+						animate('#title', 'flipOutX');
+						setTimeout(function(){
+							$('#title').css('visibility','hidden');
+						}, 490);
+					},100);
+					return false;
+				});
+
+
+			//animate
+			function animate(element, animation) {
+				$(element).addClass('animated '+animation);
+				var wait = setTimeout(function(){
+					$(element).removeClass('animated '+animation);
+				}, 490);
+			}
+		});
+		</script>
+
+
+		<!-- Parallax -->
+		<script src="../../static/js/parallax.js"></script>
+		<script>
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene);
+		</script>
+
+		<!-- Animsition -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".animsition").animsition({
+
+					// CHANGER L'ANIMATION D'ENTREE //
+					inClass: 'zoom-in-lg',
+					//
+
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+    				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    				loading: true,
+    				loadingParentElement: 'body', //animsition wrapper element
+    				loadingClass: 'animsition-loading',
+    				loadingInner: '', // e.g '<img src="loading.svg" />'
+    				timeout: false,
+    				timeoutCountdown: 5000,
+    				onLoadEvent: true,
+    				browser: [ 'animation-duration', '-webkit-animation-duration'],
+    				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    				overlay : false,
+    				overlayClass : 'animsition-overlay-slide',
+    				overlayParentElement : 'body',
+    				transition: function(url){ window.location.href = url; }
+    			});
+			});
+		</script>
+
+		<!-- tilt.js -->
+		<script src="../../static/js/tilt.jquery.min.js"></script>
+
+		<!-- Howler.js -->
+		<script src="../../static/js/howler.min.js"></script>
+		<script>
+		var sound = new Howl({
+			src: ['../../static/sound/optimised_tracks/galimatias.ogg'],
+			autoplay: true,
+			loop: true,
+			volume: 0
+		});
+
+		sound.play();
+		sound.seek(8);
+		sound.fade(0, 0.5, 400);
+		</script>
+
+		<script type="text/javascript">
+			$('.animsition-link').click(function(){
+				sound.fade(0.5, 0, 400);
+			});
+		</script>
+		
+
+		<script type="text/javascript">
+			$(".js-modal-btn").modalVideo({channel:"youtube"});
+
+			$('.videobutton').click(function(){
+				sound.fade(0.5, 0, 1000);
+				setTimeout(function(){
+					sound.pause();
+				},1000);
+			});
+
+			$('.modal-video-close-btn').click(function(){
+				sound.play();
+				sound.fade(0, 0.5, 1000);
+			});
+		</script>
+
+		<!-- Fichier Perso -->
+		<script type="text/javascript" src="../../static/js/script-article.js"></script>	
+
+	</body>
+	</html>

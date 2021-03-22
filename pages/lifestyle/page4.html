@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta id="viewport" name="viewport" content ="width=device-width" />
+	<meta charset="utf-8">
+	<title>Les coulisses des sports Extrêmes</title>
+	<link rel="icon" type="image/png" href="../img/doggo.png" />
+
+	<!-- Styles perso -->
+	<link rel="stylesheet" href="../../static/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
+	<link rel="stylesheet" href="../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/fonts.css">
+
+	<!-- les CSS d'animation -->
+	<link rel="stylesheet" href="../../static/css/animate.css">
+	<link rel="stylesheet" href="../../static/css/animsition.min.css">
+
+	<!-- Importation de la librairie jQuery et du script d'animation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../../static/js/animsition.min.js"></script>		
+
+</head>
+<body>
+
+	<!-- Gestion du son -->
+	<div class="sound-set set-article">
+		<img src="../../static/img/speaker.svg" class="sound">
+		<img src="../../static/img/speaker-off.svg" class="soundoff soundoffcredits">
+	</div>
+
+	<!-- HOME -->
+	<a href="../../index.html" class="animsition-link" data-animsition-out-class="zoom-out-lg" data-animsition-out-duration="600">
+		<img src="../../static/img/home.png" class="home_button">
+	</a>
+
+	<!-- ARROWS -->
+	<!-- il suffit de décommenter -->
+	<!--TOP-->
+<!-- 	<a href="page4.html" class="animsition-link" data-animsition-out-class="fade-out-down-sm" data-animsition-out-duration="300">
+		<img src="../../static/img/arrow.png" class="arrow_top">
+	</a> -->
+	<!--DOWN-->
+	<a href="page3.html" class="animsition-link" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300">
+			<img src="../../static/img/arrow.png" class="arrow_down">
+		</a>
+	<!--LEFT-->
+	<!-- <a href="#" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300">
+			<img src="../../static/img/arrow.png" class="arrow_left">
+		</a> -->
+	<!--RIGHT-->
+	<a href="../training/index.html" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300">
+		<img src="../../static/img/arrow_slider.png" class="right_slider ">
+	</a>
+
+
+
+		<!-- Dans cette div les éléments de la transition -->
+		<div class="animsition page" style="background-color: #2979FF;">
+
+			<!-- <img class="js-modal-btn videobutton" data-video-id="sDWRyN5vypI" src="../img/play-button2.svg" alt=""> -->
+
+			<div class="contenu in_line">
+					<div class="in_column">
+						<!-- <p class="title_text">Entrainement</p> -->
+						<p class="text-left">Phasellus aliquam metus in mauris ultrices, <span class="highlight"> finibus ante</span> placerat. Integer eleifend, diam et lobortis lobortis, libero mauris egestas velit, sed neque lacus sit amet risus. Integer viverra ante fringilla rhoncus tincidunt. Vestibulum venenatis eros purus, vel mollis nunc vestibulum eget. Duis quis fringilla nisl, eu molestie diam. Donec pharetra purus felis. Quisque quis dignissim diam, eget porta neque.</p>
+						<p class="text-left">Phasellus aliquam metus in mauris ultrices, vel finibus ante placerat. Duis quis fringilla nisl, eu molestie diam. Donec pharetra purus felis. Quisque quis dignissim diam, eget porta neque.</p>
+						<p class="text-left">Phasellus aliquam metus in mauris ultrices, vel finibus ante placerat. Integer eleifend, diam et lobortis lobortis, libero mauris egestas velit, sed malesuada neque lacus sit amet risus. Donec pharetra purus felis. Quisque quis dignissim diam, eget porta neque.</p>
+					</div>
+					<div class="gallery4x4">
+						<div style="background-image: url(../../static/img/pun_dog.png);" class="gallery_item" data-tilt data-tilt-scale="1.05" data-tilt-perspective="1500"></div>
+						<div style="background-image: url(../../static/img/cliff.jpg);" class="gallery_item" data-tilt data-tilt-scale="1.05" data-tilt-perspective="1500"></div>
+						<div style="background-image: url(../../static/img/panorama.jpg);" class="gallery_item" data-tilt data-tilt-scale="1.05" data-tilt-perspective="1500"></div>
+						<div style="background-image: url(../../static/img/doggo.png);" class="gallery_item" data-tilt data-tilt-scale="1.05" data-tilt-perspective="1500"></div>
+					</div>
+					
+			</div>
+			
+
+				<!-- Dans cette div les éléments en parallax -->
+		<div class="parallax_container">
+			<div id="scene">
+				<div data-depth="-0.05"><img style="margin-left:3%; width: 110vw;" src="../../static/img/parralax-slack/layer_4.png"></div>
+				<div data-depth="0.06"><img style="margin-left:3%; width: 110vw;" src="../../static/img/parralax-slack/layer_3.png"></div>
+				<div data-depth="0.15"><img style="margin-left:3%; width: 110vw;" src="../../static/img/parralax-slack/layer_2.png"></div>
+				<div data-depth="0.2"><img style="margin-top:-10%; margin-left:3%; width: 110vw;" id="first_layer" src="../../static/img/parralax-slack/layer_1.png"></div>
+			</div>
+		</div>
+
+
+		</div>
+
+
+
+		<!-- animate.css -->
+		<script>
+			$(function(){	
+
+				$('#hitbox1').mouseover(function(){
+					$('#title').css('visibility','visibile');
+					animate('#title', 'flipInX');
+					return false;
+				})
+
+				$('#hitbox1').mouseout(function(){
+					setTimeout(function(){
+						animate('#title', 'flipOutX');
+						setTimeout(function(){
+							$('#title').css('visibility','hidden');
+						}, 490);
+					},100);
+					return false;
+				});
+
+
+			//animate
+			function animate(element, animation) {
+				$(element).addClass('animated '+animation);
+				var wait = setTimeout(function(){
+					$(element).removeClass('animated '+animation);
+				}, 490);
+			}
+		});
+		</script>
+
+
+		<!-- Parallax -->
+		<script src="../../static/js/parallax.js"></script>
+		<script>
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene);
+		</script>
+
+		<!-- Animsition -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".animsition").animsition({
+
+					// CHANGER L'ANIMATION D'ENTREE //
+					inClass: 'zoom-in-lg',
+					//
+
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+    				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    				loading: true,
+    				loadingParentElement: 'body', //animsition wrapper element
+    				loadingClass: 'animsition-loading',
+    				loadingInner: '', // e.g '<img src="loading.svg" />'
+    				timeout: false,
+    				timeoutCountdown: 5000,
+    				onLoadEvent: true,
+    				browser: [ 'animation-duration', '-webkit-animation-duration'],
+    				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    				overlay : false,
+    				overlayClass : 'animsition-overlay-slide',
+    				overlayParentElement : 'body',
+    				transition: function(url){ window.location.href = url; }
+    			});
+			});
+		</script>
+
+		<!-- tilt.js -->
+		<script src="../../static/js/tilt.jquery.min.js"></script>
+
+		<!-- Howler.js -->
+		<script src="../../static/js/howler.min.js"></script>
+		<script>
+		var sound = new Howl({
+			src: ['../sound/music.ogg'],
+			autoplay: true,
+			loop: true,
+			volume: 0.5
+		  });
+		  
+		  sound.play();
+		</script>
+
+		<script type="text/javascript">
+			$('.animsition-link').click(function(){
+				sound.fade(0.5, 0, 400);
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(".js-modal-btn").modalVideo({channel:'youtube'});
+		</script>
+
+		<script>
+			$('.videobutton').click(function(){
+				sound.fade(0.5, 0, 1000);
+				setTimeout(function(){
+					sound.pause();
+				},1000);
+			});
+		</script>
+
+		<script>
+			$('.modal-video-close-btn').click(function(){
+				sound.play();
+				sound.fade(0, 0.5, 1000);
+			});
+		</script>
+	
+	<!-- Fichier Perso -->
+	<script type="text/javascript" src="../../static/js/script-article.js"></script>	
+
+	</body>
+	</html>

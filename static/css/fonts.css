@@ -1,0 +1,29 @@
+@font-face{
+	font-family: "Titillium";
+	src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+@font-face{
+	font-family: "KaushanScript";
+	src: url('../fonts/KaushanScript-Regular.ttf');
+}
+@font-face{
+	font-family: "LemonMilk";
+	src: url('../fonts/LemonMilk.otf');
+}
+@font-face{
+	font-family: "LemonMilkBold";
+	src: url('../fonts/LemonMilkbold.otf');
+	font-style: bold;
+}
+@font-face{
+	font-family: "Raleway";
+	src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face{
+	font-family: "04B Font";
+	src: url('../fonts/04B_30__.TTF');	
+}
+@font-face{
+	font-family: "pixel intv";
+	src: url('../fonts/Pixelntv.otf');	
+}
